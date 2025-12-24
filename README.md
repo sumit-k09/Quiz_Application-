@@ -1,7 +1,7 @@
-              Quiz Application Project
-===================================================
+*****Quiz Application Project*****
+=========================================================
 
-1. Project Overview
+**1. Project Overview**
 -----------------------
 Simple Java Quiz Application using Core Java, JDBC, and MySQL.
 Features:
@@ -10,14 +10,16 @@ Features:
    - Quiz Result Calculation
    - Admin Operations (Display All Scores, Fetch Student by ID, Add Questions)
 
-2. Database Setup
+**2. Database Setup**
 --------------------------
   1. Create database:
+     
      CREATE DATABASE quizapplication;
 
-  2. Create tables:
+  3. Create tables:
 
 --------- Student Registration Table ----------
+
 CREATE TABLE studentregistration(
     id INT PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(55),
@@ -31,6 +33,7 @@ CREATE TABLE studentregistration(
 );
 
 ----------- Questions Table -------------
+
 CREATE TABLE questions(
     qid INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     question VARCHAR(900) NOT NULL,
@@ -42,6 +45,7 @@ CREATE TABLE questions(
 );
 
 ------------ Quiz Results Table ----------------
+
 CREATE TABLE quiz_result(
     result_id INT PRIMARY KEY AUTO_INCREMENT,
     student_id INT NOT NULL,
@@ -49,14 +53,19 @@ CREATE TABLE quiz_result(
     FOREIGN KEY (student_id) REFERENCES studentregistration(id)
 );
 
+--------------------------------------------------
 
-3. Admin Credentials
+**3. Admin Credentials**
 --------------------
+
 Username: admin
+
 Password: admin123
 
-4. How to Run
--------------
+-------------------
+
+**4. How to Run**
+----------------------
 1. Open project in IntelliJ.
 2. Run Main.java.
 3. Choose role: Student (s) or Admin (a)
@@ -66,7 +75,9 @@ Password: admin123
      2. Login
      3. Take Quiz
      4. View Result
+   
    - Admin:
-     6. Display All Scores
-     7. Fetch Student by ID
-     8. Add Question
+   
+     5. Display All Scores
+     6. Fetch Student by ID
+     7. Add Question
